@@ -13,7 +13,7 @@ class XzqySpider(scrapy.Spider):
         for tr in arrtr:
             txt = tr.css("::text").extract()
             if len(txt) == 2:
-                yield {'code': txt[0], 'name':txt[1]}
+                yield {'code': txt[0], 'name':txt[1], 'type':''}
             else:
                 yield {'code': txt[0], 'name':txt[2], 'type':txt[1]}
 
